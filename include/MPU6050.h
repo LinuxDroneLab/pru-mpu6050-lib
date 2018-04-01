@@ -397,11 +397,6 @@ THE SOFTWARE.
 
 // note: DMP code memory blocks defined at end of header file
 
-class MPU6050 {
-    public:
-        MPU6050();
-        MPU6050(uint8_t i2cDevice, uint8_t address);
-
         void initialize();
         bool testConnection();
 
@@ -978,10 +973,9 @@ class MPU6050 {
             uint16_t dmpGetFIFOPacketSize();
         #endif
 
-    private:
+
         uint8_t devAddr;
         uint8_t buffer[14];
-        uint8_t i2cDevice;
-};
+        uint8_t i2cChannel;
 
 #endif /* _MPU6050_H_ */
