@@ -1,39 +1,3 @@
-// I2Cdev library collection - MPU6050 I2C device class
-// Based on InvenSense MPU-6050 register map document rev. 2.0, 5/19/2011 (RM-MPU-6000A-00)
-// 10/3/2011 by Jeff Rowberg <jeff@rowberg.net>
-// Updates should (hopefully) always be available at https://github.com/jrowberg/i2cdevlib
-//
-// Changelog:
-//     ... - ongoing debug release
-
-// NOTE: THIS IS ONLY A PARIAL RELEASE. THIS DEVICE CLASS IS CURRENTLY UNDERGOING ACTIVE
-// DEVELOPMENT AND IS STILL MISSING SOME IMPORTANT FEATURES. PLEASE KEEP THIS IN MIND IF
-// YOU DECIDE TO USE THIS PARTICULAR CODE FOR ANYTHING.
-
-/* ============================================
-I2Cdev device library code is placed under the MIT license
-Copyright (c) 2012 Jeff Rowberg
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-===============================================
-*/
-
 #ifndef _MPU6050_H_
 #define _MPU6050_H_
 
@@ -397,357 +361,355 @@ THE SOFTWARE.
 
 // note: DMP code memory blocks defined at end of header file
 
-        void pru_mpu6050_driver_Initialize();
-        bool pru_mpu6050_driver_TestConnection();
+void pru_mpu6050_driver_Initialize();
+uint8_t pru_mpu6050_driver_TestConnection();
 
-        // AUX_VDDIO register
-        uint8_t pru_mpu6050_driver_GetAuxVDDIOLevel();
-        void pru_mpu6050_driver_SetAuxVDDIOLevel(uint8_t level);
+// AUX_VDDIO register
+uint8_t pru_mpu6050_driver_GetAuxVDDIOLevel();
+void pru_mpu6050_driver_SetAuxVDDIOLevel(uint8_t level);
 
-        // SMPLRT_DIV register
-        uint8_t pru_mpu6050_driver_GetRate();
-        void pru_mpu6050_driver_SetRate(uint8_t rate);
+// SMPLRT_DIV register
+uint8_t pru_mpu6050_driver_GetRate();
+void pru_mpu6050_driver_SetRate(uint8_t rate);
 
-        // CONFIG register
-        uint8_t pru_mpu6050_driver_GetExternalFrameSync();
-        void pru_mpu6050_driver_SetExternalFrameSync(uint8_t sync);
-        uint8_t pru_mpu6050_driver_GetDLPFMode();
-        void pru_mpu6050_driver_SetDLPFMode(uint8_t bandwidth);
+// CONFIG register
+uint8_t pru_mpu6050_driver_GetExternalFrameSync();
+void pru_mpu6050_driver_SetExternalFrameSync(uint8_t sync);
+uint8_t pru_mpu6050_driver_GetDLPFMode();
+void pru_mpu6050_driver_SetDLPFMode(uint8_t bandwidth);
 
-        // GYRO_CONFIG register
-        uint8_t pru_mpu6050_driver_GetFullScaleGyroRange();
-        void pru_mpu6050_driver_SetFullScaleGyroRange(uint8_t range);
+// GYRO_CONFIG register
+uint8_t pru_mpu6050_driver_GetFullScaleGyroRange();
+void pru_mpu6050_driver_SetFullScaleGyroRange(uint8_t range);
 
-        // ACCEL_CONFIG register
-        bool getAccelXSelfTest();
-        void setAccelXSelfTest(bool enabled);
-        bool getAccelYSelfTest();
-        void setAccelYSelfTest(bool enabled);
-        bool getAccelZSelfTest();
-        void setAccelZSelfTest(bool enabled);
-        uint8_t getFullScaleAccelRange();
-        void setFullScaleAccelRange(uint8_t range);
-        uint8_t getDHPFMode();
-        void setDHPFMode(uint8_t mode);
+// ACCEL_CONFIG register
+uint8_t getAccelXSelfTest();
+void setAccelXSelfTest(uint8_t enabled);
+uint8_t getAccelYSelfTest();
+void setAccelYSelfTest(uint8_t enabled);
+uint8_t getAccelZSelfTest();
+void setAccelZSelfTest(uint8_t enabled);
+uint8_t getFullScaleAccelRange();
+void setFullScaleAccelRange(uint8_t range);
+uint8_t getDHPFMode();
+void setDHPFMode(uint8_t mode);
 
-        // FF_THR register
-        uint8_t getFreefallDetectionThreshold();
-        void setFreefallDetectionThreshold(uint8_t threshold);
+// FF_THR register
+uint8_t getFreefallDetectionThreshold();
+void setFreefallDetectionThreshold(uint8_t threshold);
 
-        // FF_DUR register
-        uint8_t getFreefallDetectionDuration();
-        void setFreefallDetectionDuration(uint8_t duration);
+// FF_DUR register
+uint8_t getFreefallDetectionDuration();
+void setFreefallDetectionDuration(uint8_t duration);
 
-        // MOT_THR register
-        uint8_t getMotionDetectionThreshold();
-        void setMotionDetectionThreshold(uint8_t threshold);
+// MOT_THR register
+uint8_t getMotionDetectionThreshold();
+void setMotionDetectionThreshold(uint8_t threshold);
 
-        // MOT_DUR register
-        uint8_t getMotionDetectionDuration();
-        void setMotionDetectionDuration(uint8_t duration);
+// MOT_DUR register
+uint8_t getMotionDetectionDuration();
+void setMotionDetectionDuration(uint8_t duration);
 
-        // ZRMOT_THR register
-        uint8_t getZeroMotionDetectionThreshold();
-        void setZeroMotionDetectionThreshold(uint8_t threshold);
+// ZRMOT_THR register
+uint8_t getZeroMotionDetectionThreshold();
+void setZeroMotionDetectionThreshold(uint8_t threshold);
 
-        // ZRMOT_DUR register
-        uint8_t getZeroMotionDetectionDuration();
-        void setZeroMotionDetectionDuration(uint8_t duration);
+// ZRMOT_DUR register
+uint8_t getZeroMotionDetectionDuration();
+void setZeroMotionDetectionDuration(uint8_t duration);
 
-        // FIFO_EN register
-        bool getTempFIFOEnabled();
-        void setTempFIFOEnabled(bool enabled);
-        bool getXGyroFIFOEnabled();
-        void setXGyroFIFOEnabled(bool enabled);
-        bool getYGyroFIFOEnabled();
-        void setYGyroFIFOEnabled(bool enabled);
-        bool getZGyroFIFOEnabled();
-        void setZGyroFIFOEnabled(bool enabled);
-        bool getAccelFIFOEnabled();
-        void setAccelFIFOEnabled(bool enabled);
-        bool getSlave2FIFOEnabled();
-        void setSlave2FIFOEnabled(bool enabled);
-        bool getSlave1FIFOEnabled();
-        void setSlave1FIFOEnabled(bool enabled);
-        bool getSlave0FIFOEnabled();
-        void setSlave0FIFOEnabled(bool enabled);
+// FIFO_EN register
+uint8_t getTempFIFOEnabled();
+void setTempFIFOEnabled(uint8_t enabled);
+uint8_t getXGyroFIFOEnabled();
+void setXGyroFIFOEnabled(uint8_t enabled);
+uint8_t getYGyroFIFOEnabled();
+void setYGyroFIFOEnabled(uint8_t enabled);
+uint8_t getZGyroFIFOEnabled();
+void setZGyroFIFOEnabled(uint8_t enabled);
+uint8_t getAccelFIFOEnabled();
+void setAccelFIFOEnabled(uint8_t enabled);
+uint8_t getSlave2FIFOEnabled();
+void setSlave2FIFOEnabled(uint8_t enabled);
+uint8_t getSlave1FIFOEnabled();
+void setSlave1FIFOEnabled(uint8_t enabled);
+uint8_t getSlave0FIFOEnabled();
+void setSlave0FIFOEnabled(uint8_t enabled);
 
-        // I2C_MST_CTRL register
-        bool getMultiMasterEnabled();
-        void setMultiMasterEnabled(bool enabled);
-        bool getWaitForExternalSensorEnabled();
-        void setWaitForExternalSensorEnabled(bool enabled);
-        bool getSlave3FIFOEnabled();
-        void setSlave3FIFOEnabled(bool enabled);
-        bool getSlaveReadWriteTransitionEnabled();
-        void setSlaveReadWriteTransitionEnabled(bool enabled);
-        uint8_t getMasterClockSpeed();
-        void setMasterClockSpeed(uint8_t speed);
+// I2C_MST_CTRL register
+uint8_t getMultiMasterEnabled();
+void setMultiMasterEnabled(uint8_t enabled);
+uint8_t getWaitForExternalSensorEnabled();
+void setWaitForExternalSensorEnabled(uint8_t enabled);
+uint8_t getSlave3FIFOEnabled();
+void setSlave3FIFOEnabled(uint8_t enabled);
+uint8_t getSlaveReadWriteTransitionEnabled();
+void setSlaveReadWriteTransitionEnabled(uint8_t enabled);
+uint8_t getMasterClockSpeed();
+void setMasterClockSpeed(uint8_t speed);
 
-        // I2C_SLV* registers (Slave 0-3)
-        uint8_t getSlaveAddress(uint8_t num);
-        void setSlaveAddress(uint8_t num, uint8_t address);
-        uint8_t getSlaveRegister(uint8_t num);
-        void setSlaveRegister(uint8_t num, uint8_t reg);
-        bool getSlaveEnabled(uint8_t num);
-        void setSlaveEnabled(uint8_t num, bool enabled);
-        bool getSlaveWordByteSwap(uint8_t num);
-        void setSlaveWordByteSwap(uint8_t num, bool enabled);
-        bool getSlaveWriteMode(uint8_t num);
-        void setSlaveWriteMode(uint8_t num, bool mode);
-        bool getSlaveWordGroupOffset(uint8_t num);
-        void setSlaveWordGroupOffset(uint8_t num, bool enabled);
-        uint8_t getSlaveDataLength(uint8_t num);
-        void setSlaveDataLength(uint8_t num, uint8_t length);
+// I2C_SLV* registers (Slave 0-3)
+uint8_t getSlaveAddress(uint8_t num);
+void setSlaveAddress(uint8_t num, uint8_t address);
+uint8_t getSlaveRegister(uint8_t num);
+void setSlaveRegister(uint8_t num, uint8_t reg);
+uint8_t getSlaveEnabled(uint8_t num);
+void setSlaveEnabled(uint8_t num, uint8_t enabled);
+uint8_t getSlaveWordByteSwap(uint8_t num);
+void setSlaveWordByteSwap(uint8_t num, uint8_t enabled);
+uint8_t getSlaveWriteMode(uint8_t num);
+void setSlaveWriteMode(uint8_t num, uint8_t mode);
+uint8_t getSlaveWordGroupOffset(uint8_t num);
+void setSlaveWordGroupOffset(uint8_t num, uint8_t enabled);
+uint8_t getSlaveDataLength(uint8_t num);
+void setSlaveDataLength(uint8_t num, uint8_t length);
 
-        // I2C_SLV* registers (Slave 4)
-        uint8_t getSlave4Address();
-        void setSlave4Address(uint8_t address);
-        uint8_t getSlave4Register();
-        void setSlave4Register(uint8_t reg);
-        void setSlave4OutputByte(uint8_t data);
-        bool getSlave4Enabled();
-        void setSlave4Enabled(bool enabled);
-        bool getSlave4InterruptEnabled();
-        void setSlave4InterruptEnabled(bool enabled);
-        bool getSlave4WriteMode();
-        void setSlave4WriteMode(bool mode);
-        uint8_t getSlave4MasterDelay();
-        void setSlave4MasterDelay(uint8_t delay);
-        uint8_t getSlate4InputByte();
+// I2C_SLV* registers (Slave 4)
+uint8_t getSlave4Address();
+void setSlave4Address(uint8_t address);
+uint8_t getSlave4Register();
+void setSlave4Register(uint8_t reg);
+void setSlave4OutputByte(uint8_t data);
+uint8_t getSlave4Enabled();
+void setSlave4Enabled(uint8_t enabled);
+uint8_t getSlave4InterruptEnabled();
+void setSlave4InterruptEnabled(uint8_t enabled);
+uint8_t getSlave4WriteMode();
+void setSlave4WriteMode(uint8_t mode);
+uint8_t getSlave4MasterDelay();
+void setSlave4MasterDelay(uint8_t delay);
+uint8_t getSlate4InputByte();
 
-        // I2C_MST_STATUS register
-        bool getPassthroughStatus();
-        bool getSlave4IsDone();
-        bool getLostArbitration();
-        bool getSlave4Nack();
-        bool getSlave3Nack();
-        bool getSlave2Nack();
-        bool getSlave1Nack();
-        bool getSlave0Nack();
+// I2C_MST_STATUS register
+uint8_t getPassthroughStatus();
+uint8_t getSlave4IsDone();
+uint8_t getLostArbitration();
+uint8_t getSlave4Nack();
+uint8_t getSlave3Nack();
+uint8_t getSlave2Nack();
+uint8_t getSlave1Nack();
+uint8_t getSlave0Nack();
 
-        // INT_PIN_CFG register
-        bool getInterruptMode();
-        void setInterruptMode(bool mode);
-        bool getInterruptDrive();
-        void setInterruptDrive(bool drive);
-        bool getInterruptLatch();
-        void setInterruptLatch(bool latch);
-        bool getInterruptLatchClear();
-        void setInterruptLatchClear(bool clear);
-        bool getFSyncInterruptLevel();
-        void setFSyncInterruptLevel(bool level);
-        bool getFSyncInterruptEnabled();
-        void setFSyncInterruptEnabled(bool enabled);
-        bool getI2CBypassEnabled();
-        void setI2CBypassEnabled(bool enabled);
-        bool getClockOutputEnabled();
-        void setClockOutputEnabled(bool enabled);
+// INT_PIN_CFG register
+uint8_t getInterruptMode();
+void setInterruptMode(uint8_t mode);
+uint8_t getInterruptDrive();
+void setInterruptDrive(uint8_t drive);
+uint8_t getInterruptLatch();
+void setInterruptLatch(uint8_t latch);
+uint8_t getInterruptLatchClear();
+void setInterruptLatchClear(uint8_t clear);
+uint8_t getFSyncInterruptLevel();
+void setFSyncInterruptLevel(uint8_t level);
+uint8_t getFSyncInterruptEnabled();
+void setFSyncInterruptEnabled(uint8_t enabled);
+uint8_t getI2CBypassEnabled();
+void setI2CBypassEnabled(uint8_t enabled);
+uint8_t getClockOutputEnabled();
+void setClockOutputEnabled(uint8_t enabled);
 
-        // INT_ENABLE register
-        uint8_t getIntEnabled();
-        void setIntEnabled(uint8_t enabled);
-        bool getIntFreefallEnabled();
-        void setIntFreefallEnabled(bool enabled);
-        bool getIntMotionEnabled();
-        void setIntMotionEnabled(bool enabled);
-        bool getIntZeroMotionEnabled();
-        void setIntZeroMotionEnabled(bool enabled);
-        bool getIntFIFOBufferOverflowEnabled();
-        void setIntFIFOBufferOverflowEnabled(bool enabled);
-        bool getIntI2CMasterEnabled();
-        void setIntI2CMasterEnabled(bool enabled);
-        bool getIntDataReadyEnabled();
-        void setIntDataReadyEnabled(bool enabled);
+// INT_ENABLE register
+uint8_t getIntEnabled();
+void setIntEnabled(uint8_t enabled);
+uint8_t getIntFreefallEnabled();
+void setIntFreefallEnabled(uint8_t enabled);
+uint8_t getIntMotionEnabled();
+void setIntMotionEnabled(uint8_t enabled);
+uint8_t getIntZeroMotionEnabled();
+void setIntZeroMotionEnabled(uint8_t enabled);
+uint8_t getIntFIFOBufferOverflowEnabled();
+void setIntFIFOBufferOverflowEnabled(uint8_t enabled);
+uint8_t getIntI2CMasterEnabled();
+void setIntI2CMasterEnabled(uint8_t enabled);
+uint8_t getIntDataReadyEnabled();
+void setIntDataReadyEnabled(uint8_t enabled);
 
-        // INT_STATUS register
-        uint8_t getIntStatus();
-        bool getIntFreefallStatus();
-        bool getIntMotionStatus();
-        bool getIntZeroMotionStatus();
-        bool getIntFIFOBufferOverflowStatus();
-        bool getIntI2CMasterStatus();
-        bool getIntDataReadyStatus();
+// INT_STATUS register
+uint8_t getIntStatus();
+uint8_t getIntFreefallStatus();
+uint8_t getIntMotionStatus();
+uint8_t getIntZeroMotionStatus();
+uint8_t getIntFIFOBufferOverflowStatus();
+uint8_t getIntI2CMasterStatus();
+uint8_t getIntDataReadyStatus();
 
-        // ACCEL_*OUT_* registers
-        void getMotion9(int16_t* ax, int16_t* ay, int16_t* az, int16_t* gx, int16_t* gy, int16_t* gz, int16_t* mx, int16_t* my, int16_t* mz);
-        void getMotion6(int16_t* ax, int16_t* ay, int16_t* az, int16_t* gx, int16_t* gy, int16_t* gz);
-        void getAcceleration(int16_t* x, int16_t* y, int16_t* z);
-        int16_t getAccelerationX();
-        int16_t getAccelerationY();
-        int16_t getAccelerationZ();
+// ACCEL_*OUT_* registers
+void getMotion9(int16_t* ax, int16_t* ay, int16_t* az, int16_t* gx, int16_t* gy,
+                int16_t* gz, int16_t* mx, int16_t* my, int16_t* mz);
+void getMotion6(int16_t* ax, int16_t* ay, int16_t* az, int16_t* gx, int16_t* gy,
+                int16_t* gz);
+void getAcceleration(int16_t* x, int16_t* y, int16_t* z);
+int16_t getAccelerationX();
+int16_t getAccelerationY();
+int16_t getAccelerationZ();
 
-        // TEMP_OUT_* registers
-        int16_t getTemperature();
+// TEMP_OUT_* registers
+int16_t getTemperature();
 
-        // GYRO_*OUT_* registers
-        void getRotation(int16_t* x, int16_t* y, int16_t* z);
-        int16_t getRotationX();
-        int16_t getRotationY();
-        int16_t getRotationZ();
+// GYRO_*OUT_* registers
+void getRotation(int16_t* x, int16_t* y, int16_t* z);
+int16_t getRotationX();
+int16_t getRotationY();
+int16_t getRotationZ();
 
-        // EXT_SENS_DATA_* registers
-        uint8_t getExternalSensorByte(int position);
-        uint16_t getExternalSensorWord(int position);
-        uint32_t getExternalSensorDWord(int position);
+// EXT_SENS_DATA_* registers
+uint8_t getExternalSensorByte(int position);
+uint16_t getExternalSensorWord(int position);
+uint32_t getExternalSensorDWord(int position);
 
-        // MOT_DETECT_STATUS register
-        bool getXNegMotionDetected();
-        bool getXPosMotionDetected();
-        bool getYNegMotionDetected();
-        bool getYPosMotionDetected();
-        bool getZNegMotionDetected();
-        bool getZPosMotionDetected();
-        bool getZeroMotionDetected();
+// MOT_DETECT_STATUS register
+uint8_t getXNegMotionDetected();
+uint8_t getXPosMotionDetected();
+uint8_t getYNegMotionDetected();
+uint8_t getYPosMotionDetected();
+uint8_t getZNegMotionDetected();
+uint8_t getZPosMotionDetected();
+uint8_t getZeroMotionDetected();
 
-        // I2C_SLV*_DO register
-        void setSlaveOutputByte(uint8_t num, uint8_t data);
+// I2C_SLV*_DO register
+void setSlaveOutputByte(uint8_t num, uint8_t data);
 
-        // I2C_MST_DELAY_CTRL register
-        bool getExternalShadowDelayEnabled();
-        void setExternalShadowDelayEnabled(bool enabled);
-        bool getSlaveDelayEnabled(uint8_t num);
-        void setSlaveDelayEnabled(uint8_t num, bool enabled);
+// I2C_MST_DELAY_CTRL register
+uint8_t getExternalShadowDelayEnabled();
+void setExternalShadowDelayEnabled(uint8_t enabled);
+uint8_t getSlaveDelayEnabled(uint8_t num);
+void setSlaveDelayEnabled(uint8_t num, uint8_t enabled);
 
-        // SIGNAL_PATH_RESET register
-        void resetGyroscopePath();
-        void resetAccelerometerPath();
-        void resetTemperaturePath();
+// SIGNAL_PATH_RESET register
+void resetGyroscopePath();
+void resetAccelerometerPath();
+void resetTemperaturePath();
 
-        // MOT_DETECT_CTRL register
-        uint8_t getAccelerometerPowerOnDelay();
-        void setAccelerometerPowerOnDelay(uint8_t delay);
-        uint8_t getFreefallDetectionCounterDecrement();
-        void setFreefallDetectionCounterDecrement(uint8_t decrement);
-        uint8_t getMotionDetectionCounterDecrement();
-        void setMotionDetectionCounterDecrement(uint8_t decrement);
+// MOT_DETECT_CTRL register
+uint8_t getAccelerometerPowerOnDelay();
+void setAccelerometerPowerOnDelay(uint8_t delay);
+uint8_t getFreefallDetectionCounterDecrement();
+void setFreefallDetectionCounterDecrement(uint8_t decrement);
+uint8_t getMotionDetectionCounterDecrement();
+void setMotionDetectionCounterDecrement(uint8_t decrement);
 
-        // USER_CTRL register
-        bool getFIFOEnabled();
-        void setFIFOEnabled(bool enabled);
-        bool getI2CMasterModeEnabled();
-        void setI2CMasterModeEnabled(bool enabled);
-        void switchSPIEnabled(bool enabled);
-        void resetFIFO();
-        void resetI2CMaster();
-        void resetSensors();
+// USER_CTRL register
+uint8_t getFIFOEnabled();
+void setFIFOEnabled(uint8_t enabled);
+uint8_t getI2CMasterModeEnabled();
+void setI2CMasterModeEnabled(uint8_t enabled);
+void switchSPIEnabled(uint8_t enabled);
+void resetFIFO();
+void resetI2CMaster();
+void resetSensors();
 
-        // PWR_MGMT_1 register
-        void reset();
-        bool getSleepEnabled();
-        void setSleepEnabled(bool enabled);
-        bool getWakeCycleEnabled();
-        void setWakeCycleEnabled(bool enabled);
-        bool getTempSensorEnabled();
-        void setTempSensorEnabled(bool enabled);
-        uint8_t getClockSource();
-        void setClockSource(uint8_t source);
+// PWR_MGMT_1 register
+void reset();
+uint8_t getSleepEnabled();
+void setSleepEnabled(uint8_t enabled);
+uint8_t getWakeCycleEnabled();
+void setWakeCycleEnabled(uint8_t enabled);
+uint8_t getTempSensorEnabled();
+void setTempSensorEnabled(uint8_t enabled);
+uint8_t getClockSource();
+void setClockSource(uint8_t source);
 
-        // PWR_MGMT_2 register
-        uint8_t getWakeFrequency();
-        void setWakeFrequency(uint8_t frequency);
-        bool getStandbyXAccelEnabled();
-        void setStandbyXAccelEnabled(bool enabled);
-        bool getStandbyYAccelEnabled();
-        void setStandbyYAccelEnabled(bool enabled);
-        bool getStandbyZAccelEnabled();
-        void setStandbyZAccelEnabled(bool enabled);
-        bool getStandbyXGyroEnabled();
-        void setStandbyXGyroEnabled(bool enabled);
-        bool getStandbyYGyroEnabled();
-        void setStandbyYGyroEnabled(bool enabled);
-        bool getStandbyZGyroEnabled();
-        void setStandbyZGyroEnabled(bool enabled);
+// PWR_MGMT_2 register
+uint8_t getWakeFrequency();
+void setWakeFrequency(uint8_t frequency);
+uint8_t getStandbyXAccelEnabled();
+void setStandbyXAccelEnabled(uint8_t enabled);
+uint8_t getStandbyYAccelEnabled();
+void setStandbyYAccelEnabled(uint8_t enabled);
+uint8_t getStandbyZAccelEnabled();
+void setStandbyZAccelEnabled(uint8_t enabled);
+uint8_t getStandbyXGyroEnabled();
+void setStandbyXGyroEnabled(uint8_t enabled);
+uint8_t getStandbyYGyroEnabled();
+void setStandbyYGyroEnabled(uint8_t enabled);
+uint8_t getStandbyZGyroEnabled();
+void setStandbyZGyroEnabled(uint8_t enabled);
 
-        // FIFO_COUNT_* registers
-        uint16_t getFIFOCount();
+// FIFO_COUNT_* registers
+uint16_t getFIFOCount();
 
-        // FIFO_R_W register
-        uint8_t getFIFOByte();
-        void setFIFOByte(uint8_t data);
-        void getFIFOBytes(uint8_t *data, uint8_t length);
+// FIFO_R_W register
+uint8_t getFIFOByte();
+void setFIFOByte(uint8_t data);
+void getFIFOBytes(uint8_t *data, uint8_t length);
 
-        // WHO_AM_I register
-        uint8_t getDeviceID();
-        void setDeviceID(uint8_t id);
-        
-        // ======== UNDOCUMENTED/DMP REGISTERS/METHODS ========
-        
-        // XG_OFFS_TC register
-        uint8_t getOTPBankValid();
-        void setOTPBankValid(bool enabled);
-        int8_t getXGyroOffset();
-        void setXGyroOffset(int8_t offset);
+// WHO_AM_I register
+uint8_t getDeviceID();
+void setDeviceID(uint8_t id);
 
-        // YG_OFFS_TC register
-        int8_t getYGyroOffset();
-        void setYGyroOffset(int8_t offset);
+// ======== UNDOCUMENTED/DMP REGISTERS/METHODS ========
 
-        // ZG_OFFS_TC register
-        int8_t getZGyroOffset();
-        void setZGyroOffset(int8_t offset);
+// XG_OFFS_TC register
+uint8_t getOTPBankValid();
+void setOTPBankValid(uint8_t enabled);
+int8_t getXGyroOffset();
+void setXGyroOffset(int8_t offset);
 
-        // X_FINE_GAIN register
-        int8_t getXFineGain();
-        void setXFineGain(int8_t gain);
+// YG_OFFS_TC register
+int8_t getYGyroOffset();
+void setYGyroOffset(int8_t offset);
 
-        // Y_FINE_GAIN register
-        int8_t getYFineGain();
-        void setYFineGain(int8_t gain);
+// ZG_OFFS_TC register
+int8_t getZGyroOffset();
+void setZGyroOffset(int8_t offset);
 
-        // Z_FINE_GAIN register
-        int8_t getZFineGain();
-        void setZFineGain(int8_t gain);
+// X_FINE_GAIN register
+int8_t getXFineGain();
+void setXFineGain(int8_t gain);
 
-        // XA_OFFS_* registers
-        int16_t getXAccelOffset();
-        void setXAccelOffset(int16_t offset);
+// Y_FINE_GAIN register
+int8_t getYFineGain();
+void setYFineGain(int8_t gain);
 
-        // YA_OFFS_* register
-        int16_t getYAccelOffset();
-        void setYAccelOffset(int16_t offset);
+// Z_FINE_GAIN register
+int8_t getZFineGain();
+void setZFineGain(int8_t gain);
 
-        // ZA_OFFS_* register
-        int16_t getZAccelOffset();
-        void setZAccelOffset(int16_t offset);
+// XA_OFFS_* registers
+int16_t getXAccelOffset();
+void setXAccelOffset(int16_t offset);
 
-        // XG_OFFS_USR* registers
-        int16_t getXGyroOffsetUser();
-        void setXGyroOffsetUser(int16_t offset);
+// YA_OFFS_* register
+int16_t getYAccelOffset();
+void setYAccelOffset(int16_t offset);
 
-        // YG_OFFS_USR* register
-        int16_t getYGyroOffsetUser();
-        void setYGyroOffsetUser(int16_t offset);
+// ZA_OFFS_* register
+int16_t getZAccelOffset();
+void setZAccelOffset(int16_t offset);
 
-        // ZG_OFFS_USR* register
-        int16_t getZGyroOffsetUser();
-        void setZGyroOffsetUser(int16_t offset);
-        
-        // INT_ENABLE register (DMP functions)
-        bool getIntPLLReadyEnabled();
-        void setIntPLLReadyEnabled(bool enabled);
-        bool getIntDMPEnabled();
-        void setIntDMPEnabled(bool enabled);
-        
-        // DMP_INT_STATUS
-        bool getDMPInt5Status();
-        bool getDMPInt4Status();
-        bool getDMPInt3Status();
-        bool getDMPInt2Status();
-        bool getDMPInt1Status();
-        bool getDMPInt0Status();
+// XG_OFFS_USR* registers
+int16_t getXGyroOffsetUser();
+void setXGyroOffsetUser(int16_t offset);
 
-        // INT_STATUS register (DMP functions)
-        bool getIntPLLReadyStatus();
-        bool getIntDMPStatus();
-        
-        // USER_CTRL register (DMP functions)
-        bool getDMPEnabled();
-        void setDMPEnabled(bool enabled);
-        void resetDMP();
+// YG_OFFS_USR* register
+int16_t getYGyroOffsetUser();
+void setYGyroOffsetUser(int16_t offset);
 
-        uint8_t pru_mpu6050_driver_DevAddr;
-        uint8_t pru_mpu6050_driver_Buffer[14]; // Devono essere due buffer indicizzati per i2cChannel
-        uint8_t pru_mpu6050_driver_I2cChannel; // Da passare come argomento su ogni metodo
+// ZG_OFFS_USR* register
+int16_t getZGyroOffsetUser();
+void setZGyroOffsetUser(int16_t offset);
+
+// INT_ENABLE register (DMP functions)
+uint8_t getIntPLLReadyEnabled();
+void setIntPLLReadyEnabled(uint8_t enabled);
+uint8_t getIntDMPEnabled();
+void setIntDMPEnabled(uint8_t enabled);
+
+// DMP_INT_STATUS
+uint8_t getDMPInt5Status();
+uint8_t getDMPInt4Status();
+uint8_t getDMPInt3Status();
+uint8_t getDMPInt2Status();
+uint8_t getDMPInt1Status();
+uint8_t getDMPInt0Status();
+
+// INT_STATUS register (DMP functions)
+uint8_t getIntPLLReadyStatus();
+uint8_t getIntDMPStatus();
+
+// USER_CTRL register (DMP functions)
+uint8_t getDMPEnabled();
+void setDMPEnabled(uint8_t enabled);
+void resetDMP();
 
 #endif /* _MPU6050_H_ */
