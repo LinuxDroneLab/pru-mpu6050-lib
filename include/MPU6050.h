@@ -383,333 +383,487 @@ uint8_t pru_mpu6050_driver_GetFullScaleGyroRange();
 void pru_mpu6050_driver_SetFullScaleGyroRange(uint8_t range);
 
 // ACCEL_CONFIG register
-uint8_t getAccelXSelfTest();
-void setAccelXSelfTest(uint8_t enabled);
-uint8_t getAccelYSelfTest();
-void setAccelYSelfTest(uint8_t enabled);
-uint8_t getAccelZSelfTest();
-void setAccelZSelfTest(uint8_t enabled);
-uint8_t getFullScaleAccelRange();
-void setFullScaleAccelRange(uint8_t range);
-uint8_t getDHPFMode();
-void setDHPFMode(uint8_t mode);
+uint8_t pru_mpu6050_driver_GetAccelXSelfTest();
+void pru_mpu6050_driver_SetAccelXSelfTest(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetAccelYSelfTest();
+void pru_mpu6050_driver_SetAccelYSelfTest(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetAccelZSelfTest();
+void pru_mpu6050_driver_SetAccelZSelfTest(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetFullScaleAccelRange();
+void pru_mpu6050_driver_SetFullScaleAccelRange(uint8_t range);
+uint8_t pru_mpu6050_driver_GetDHPFMode();
+void pru_mpu6050_driver_SetDHPFMode(uint8_t mode);
 
 // FF_THR register
-uint8_t getFreefallDetectionThreshold();
-void setFreefallDetectionThreshold(uint8_t threshold);
+uint8_t pru_mpu6050_driver_GetFreefallDetectionThreshold();
+void pru_mpu6050_driver_SetFreefallDetectionThreshold(uint8_t threshold);
 
 // FF_DUR register
-uint8_t getFreefallDetectionDuration();
-void setFreefallDetectionDuration(uint8_t duration);
+uint8_t pru_mpu6050_driver_GetFreefallDetectionDuration();
+void pru_mpu6050_driver_SetFreefallDetectionDuration(uint8_t duration);
 
 // MOT_THR register
-uint8_t getMotionDetectionThreshold();
-void setMotionDetectionThreshold(uint8_t threshold);
+uint8_t pru_mpu6050_driver_GetMotionDetectionThreshold();
+void pru_mpu6050_driver_SetMotionDetectionThreshold(uint8_t threshold);
 
 // MOT_DUR register
-uint8_t getMotionDetectionDuration();
-void setMotionDetectionDuration(uint8_t duration);
+uint8_t pru_mpu6050_driver_GetMotionDetectionDuration();
+void pru_mpu6050_driver_SetMotionDetectionDuration(uint8_t duration);
 
 // ZRMOT_THR register
-uint8_t getZeroMotionDetectionThreshold();
-void setZeroMotionDetectionThreshold(uint8_t threshold);
+uint8_t pru_mpu6050_driver_GetZeroMotionDetectionThreshold();
+void pru_mpu6050_driver_SetZeroMotionDetectionThreshold(uint8_t threshold);
 
 // ZRMOT_DUR register
-uint8_t getZeroMotionDetectionDuration();
-void setZeroMotionDetectionDuration(uint8_t duration);
+uint8_t pru_mpu6050_driver_GetZeroMotionDetectionDuration();
+void pru_mpu6050_driver_SetZeroMotionDetectionDuration(uint8_t duration);
 
 // FIFO_EN register
-uint8_t getTempFIFOEnabled();
-void setTempFIFOEnabled(uint8_t enabled);
-uint8_t getXGyroFIFOEnabled();
-void setXGyroFIFOEnabled(uint8_t enabled);
-uint8_t getYGyroFIFOEnabled();
-void setYGyroFIFOEnabled(uint8_t enabled);
-uint8_t getZGyroFIFOEnabled();
-void setZGyroFIFOEnabled(uint8_t enabled);
-uint8_t getAccelFIFOEnabled();
-void setAccelFIFOEnabled(uint8_t enabled);
-uint8_t getSlave2FIFOEnabled();
-void setSlave2FIFOEnabled(uint8_t enabled);
-uint8_t getSlave1FIFOEnabled();
-void setSlave1FIFOEnabled(uint8_t enabled);
-uint8_t getSlave0FIFOEnabled();
-void setSlave0FIFOEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetTempFIFOEnabled();
+void pru_mpu6050_driver_SetTempFIFOEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetXGyroFIFOEnabled();
+void pru_mpu6050_driver_SetXGyroFIFOEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetYGyroFIFOEnabled();
+void pru_mpu6050_driver_SetYGyroFIFOEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetZGyroFIFOEnabled();
+void pru_mpu6050_driver_SetZGyroFIFOEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetAccelFIFOEnabled();
+void pru_mpu6050_driver_SetAccelFIFOEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetSlave2FIFOEnabled();
+void pru_mpu6050_driver_SetSlave2FIFOEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetSlave1FIFOEnabled();
+void pru_mpu6050_driver_SetSlave1FIFOEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetSlave0FIFOEnabled();
+void pru_mpu6050_driver_SetSlave0FIFOEnabled(uint8_t enabled);
 
 // I2C_MST_CTRL register
-uint8_t getMultiMasterEnabled();
-void setMultiMasterEnabled(uint8_t enabled);
-uint8_t getWaitForExternalSensorEnabled();
-void setWaitForExternalSensorEnabled(uint8_t enabled);
-uint8_t getSlave3FIFOEnabled();
-void setSlave3FIFOEnabled(uint8_t enabled);
-uint8_t getSlaveReadWriteTransitionEnabled();
-void setSlaveReadWriteTransitionEnabled(uint8_t enabled);
-uint8_t getMasterClockSpeed();
-void setMasterClockSpeed(uint8_t speed);
+uint8_t pru_mpu6050_driver_GetMultiMasterEnabled();
+void pru_mpu6050_driver_SetMultiMasterEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetWaitForExternalSensorEnabled();
+void pru_mpu6050_driver_SetWaitForExternalSensorEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetSlave3FIFOEnabled();
+void pru_mpu6050_driver_SetSlave3FIFOEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetSlaveReadWriteTransitionEnabled();
+void pru_mpu6050_driver_SetSlaveReadWriteTransitionEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetMasterClockSpeed();
+void pru_mpu6050_driver_SetMasterClockSpeed(uint8_t speed);
 
 // I2C_SLV* registers (Slave 0-3)
-uint8_t getSlaveAddress(uint8_t num);
-void setSlaveAddress(uint8_t num, uint8_t address);
-uint8_t getSlaveRegister(uint8_t num);
-void setSlaveRegister(uint8_t num, uint8_t reg);
-uint8_t getSlaveEnabled(uint8_t num);
-void setSlaveEnabled(uint8_t num, uint8_t enabled);
-uint8_t getSlaveWordByteSwap(uint8_t num);
-void setSlaveWordByteSwap(uint8_t num, uint8_t enabled);
-uint8_t getSlaveWriteMode(uint8_t num);
-void setSlaveWriteMode(uint8_t num, uint8_t mode);
-uint8_t getSlaveWordGroupOffset(uint8_t num);
-void setSlaveWordGroupOffset(uint8_t num, uint8_t enabled);
-uint8_t getSlaveDataLength(uint8_t num);
-void setSlaveDataLength(uint8_t num, uint8_t length);
+uint8_t pru_mpu6050_driver_GetSlaveAddress(uint8_t num);
+void pru_mpu6050_driver_SetSlaveAddress(uint8_t num, uint8_t address);
+uint8_t pru_mpu6050_driver_GetSlaveRegister(uint8_t num);
+void pru_mpu6050_driver_SetSlaveRegister(uint8_t num, uint8_t reg);
+uint8_t pru_mpu6050_driver_GetSlaveEnabled(uint8_t num);
+void pru_mpu6050_driver_SetSlaveEnabled(uint8_t num, uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetSlaveWordByteSwap(uint8_t num);
+void pru_mpu6050_driver_SetSlaveWordByteSwap(uint8_t num, uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetSlaveWriteMode(uint8_t num);
+void pru_mpu6050_driver_SetSlaveWriteMode(uint8_t num, uint8_t mode);
+uint8_t pru_mpu6050_driver_GetSlaveWordGroupOffset(uint8_t num);
+void pru_mpu6050_driver_SetSlaveWordGroupOffset(uint8_t num, uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetSlaveDataLength(uint8_t num);
+void pru_mpu6050_driver_SetSlaveDataLength(uint8_t num, uint8_t length);
 
 // I2C_SLV* registers (Slave 4)
-uint8_t getSlave4Address();
-void setSlave4Address(uint8_t address);
-uint8_t getSlave4Register();
-void setSlave4Register(uint8_t reg);
-void setSlave4OutputByte(uint8_t data);
-uint8_t getSlave4Enabled();
-void setSlave4Enabled(uint8_t enabled);
-uint8_t getSlave4InterruptEnabled();
-void setSlave4InterruptEnabled(uint8_t enabled);
-uint8_t getSlave4WriteMode();
-void setSlave4WriteMode(uint8_t mode);
-uint8_t getSlave4MasterDelay();
-void setSlave4MasterDelay(uint8_t delay);
-uint8_t getSlate4InputByte();
+uint8_t pru_mpu6050_driver_GetSlave4Address();
+void pru_mpu6050_driver_SetSlave4Address(uint8_t address);
+uint8_t pru_mpu6050_driver_GetSlave4Register();
+void pru_mpu6050_driver_SetSlave4Register(uint8_t reg);
+void pru_mpu6050_driver_SetSlave4OutputByte(uint8_t data);
+uint8_t pru_mpu6050_driver_GetSlave4Enabled();
+void pru_mpu6050_driver_SetSlave4Enabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetSlave4InterruptEnabled();
+void pru_mpu6050_driver_SetSlave4InterruptEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetSlave4WriteMode();
+void pru_mpu6050_driver_SetSlave4WriteMode(uint8_t mode);
+uint8_t pru_mpu6050_driver_GetSlave4MasterDelay();
+void pru_mpu6050_driver_SetSlave4MasterDelay(uint8_t delay);
+uint8_t pru_mpu6050_driver_GetSlate4InputByte();
 
 // I2C_MST_STATUS register
-uint8_t getPassthroughStatus();
-uint8_t getSlave4IsDone();
-uint8_t getLostArbitration();
-uint8_t getSlave4Nack();
-uint8_t getSlave3Nack();
-uint8_t getSlave2Nack();
-uint8_t getSlave1Nack();
-uint8_t getSlave0Nack();
+uint8_t pru_mpu6050_driver_GetPassthroughStatus();
+uint8_t pru_mpu6050_driver_GetSlave4IsDone();
+uint8_t pru_mpu6050_driver_GetLostArbitration();
+uint8_t pru_mpu6050_driver_GetSlave4Nack();
+uint8_t pru_mpu6050_driver_GetSlave3Nack();
+uint8_t pru_mpu6050_driver_GetSlave2Nack();
+uint8_t pru_mpu6050_driver_GetSlave1Nack();
+uint8_t pru_mpu6050_driver_GetSlave0Nack();
 
 // INT_PIN_CFG register
-uint8_t getInterruptMode();
-void setInterruptMode(uint8_t mode);
-uint8_t getInterruptDrive();
-void setInterruptDrive(uint8_t drive);
-uint8_t getInterruptLatch();
-void setInterruptLatch(uint8_t latch);
-uint8_t getInterruptLatchClear();
-void setInterruptLatchClear(uint8_t clear);
-uint8_t getFSyncInterruptLevel();
-void setFSyncInterruptLevel(uint8_t level);
-uint8_t getFSyncInterruptEnabled();
-void setFSyncInterruptEnabled(uint8_t enabled);
-uint8_t getI2CBypassEnabled();
-void setI2CBypassEnabled(uint8_t enabled);
-uint8_t getClockOutputEnabled();
-void setClockOutputEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetInterruptMode();
+void pru_mpu6050_driver_SetInterruptMode(uint8_t mode);
+uint8_t pru_mpu6050_driver_GetInterruptDrive();
+void pru_mpu6050_driver_SetInterruptDrive(uint8_t drive);
+uint8_t pru_mpu6050_driver_GetInterruptLatch();
+void pru_mpu6050_driver_SetInterruptLatch(uint8_t latch);
+uint8_t pru_mpu6050_driver_GetInterruptLatchClear();
+void pru_mpu6050_driver_SetInterruptLatchClear(uint8_t clear);
+uint8_t pru_mpu6050_driver_GetFSyncInterruptLevel();
+void pru_mpu6050_driver_SetFSyncInterruptLevel(uint8_t level);
+uint8_t pru_mpu6050_driver_GetFSyncInterruptEnabled();
+void pru_mpu6050_driver_SetFSyncInterruptEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetI2CBypassEnabled();
+void pru_mpu6050_driver_SetI2CBypassEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetClockOutputEnabled();
+void pru_mpu6050_driver_SetClockOutputEnabled(uint8_t enabled);
 
 // INT_ENABLE register
-uint8_t getIntEnabled();
-void setIntEnabled(uint8_t enabled);
-uint8_t getIntFreefallEnabled();
-void setIntFreefallEnabled(uint8_t enabled);
-uint8_t getIntMotionEnabled();
-void setIntMotionEnabled(uint8_t enabled);
-uint8_t getIntZeroMotionEnabled();
-void setIntZeroMotionEnabled(uint8_t enabled);
-uint8_t getIntFIFOBufferOverflowEnabled();
-void setIntFIFOBufferOverflowEnabled(uint8_t enabled);
-uint8_t getIntI2CMasterEnabled();
-void setIntI2CMasterEnabled(uint8_t enabled);
-uint8_t getIntDataReadyEnabled();
-void setIntDataReadyEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetIntEnabled();
+void pru_mpu6050_driver_SetIntEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetIntFreefallEnabled();
+void pru_mpu6050_driver_SetIntFreefallEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetIntMotionEnabled();
+void pru_mpu6050_driver_SetIntMotionEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetIntZeroMotionEnabled();
+void pru_mpu6050_driver_SetIntZeroMotionEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetIntFIFOBufferOverflowEnabled();
+void pru_mpu6050_driver_SetIntFIFOBufferOverflowEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetIntI2CMasterEnabled();
+void pru_mpu6050_driver_SetIntI2CMasterEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetIntDataReadyEnabled();
+void pru_mpu6050_driver_SetIntDataReadyEnabled(uint8_t enabled);
 
 // INT_STATUS register
-uint8_t getIntStatus();
-uint8_t getIntFreefallStatus();
-uint8_t getIntMotionStatus();
-uint8_t getIntZeroMotionStatus();
-uint8_t getIntFIFOBufferOverflowStatus();
-uint8_t getIntI2CMasterStatus();
-uint8_t getIntDataReadyStatus();
+uint8_t pru_mpu6050_driver_GetIntStatus();
+uint8_t pru_mpu6050_driver_GetIntFreefallStatus();
+uint8_t pru_mpu6050_driver_GetIntMotionStatus();
+uint8_t pru_mpu6050_driver_GetIntZeroMotionStatus();
+uint8_t pru_mpu6050_driver_GetIntFIFOBufferOverflowStatus();
+uint8_t pru_mpu6050_driver_GetIntI2CMasterStatus();
+uint8_t pru_mpu6050_driver_GetIntDataReadyStatus();
 
 // ACCEL_*OUT_* registers
-void getMotion9(int16_t* ax, int16_t* ay, int16_t* az, int16_t* gx, int16_t* gy,
-                int16_t* gz, int16_t* mx, int16_t* my, int16_t* mz);
-void getMotion6(int16_t* ax, int16_t* ay, int16_t* az, int16_t* gx, int16_t* gy,
-                int16_t* gz);
-void getAcceleration(int16_t* x, int16_t* y, int16_t* z);
-int16_t getAccelerationX();
-int16_t getAccelerationY();
-int16_t getAccelerationZ();
+void pru_mpu6050_driver_GetMotion9(int16_t* ax, int16_t* ay, int16_t* az,
+                                   int16_t* gx, int16_t* gy, int16_t* gz,
+                                   int16_t* mx, int16_t* my, int16_t* mz);
+void pru_mpu6050_driver_GetMotion6(int16_t* ax, int16_t* ay, int16_t* az,
+                                   int16_t* gx, int16_t* gy, int16_t* gz);
+void pru_mpu6050_driver_GetAcceleration(int16_t* x, int16_t* y, int16_t* z);
+int16_t pru_mpu6050_driver_GetAccelerationX();
+int16_t pru_mpu6050_driver_GetAccelerationY();
+int16_t pru_mpu6050_driver_GetAccelerationZ();
 
 // TEMP_OUT_* registers
-int16_t getTemperature();
+int16_t pru_mpu6050_driver_GetTemperature();
 
 // GYRO_*OUT_* registers
-void getRotation(int16_t* x, int16_t* y, int16_t* z);
-int16_t getRotationX();
-int16_t getRotationY();
-int16_t getRotationZ();
+void pru_mpu6050_driver_GetRotation(int16_t* x, int16_t* y, int16_t* z);
+int16_t pru_mpu6050_driver_GetRotationX();
+int16_t pru_mpu6050_driver_GetRotationY();
+int16_t pru_mpu6050_driver_GetRotationZ();
 
 // EXT_SENS_DATA_* registers
-uint8_t getExternalSensorByte(int position);
-uint16_t getExternalSensorWord(int position);
-uint32_t getExternalSensorDWord(int position);
+uint8_t pru_mpu6050_driver_GetExternalSensorByte(int position);
+uint16_t pru_mpu6050_driver_GetExternalSensorWord(int position);
+uint32_t pru_mpu6050_driver_GetExternalSensorDWord(int position);
 
 // MOT_DETECT_STATUS register
-uint8_t getXNegMotionDetected();
-uint8_t getXPosMotionDetected();
-uint8_t getYNegMotionDetected();
-uint8_t getYPosMotionDetected();
-uint8_t getZNegMotionDetected();
-uint8_t getZPosMotionDetected();
-uint8_t getZeroMotionDetected();
+uint8_t pru_mpu6050_driver_GetXNegMotionDetected();
+uint8_t pru_mpu6050_driver_GetXPosMotionDetected();
+uint8_t pru_mpu6050_driver_GetYNegMotionDetected();
+uint8_t pru_mpu6050_driver_GetYPosMotionDetected();
+uint8_t pru_mpu6050_driver_GetZNegMotionDetected();
+uint8_t pru_mpu6050_driver_GetZPosMotionDetected();
+uint8_t pru_mpu6050_driver_GetZeroMotionDetected();
 
 // I2C_SLV*_DO register
-void setSlaveOutputByte(uint8_t num, uint8_t data);
+void pru_mpu6050_driver_SetSlaveOutputByte(uint8_t num, uint8_t data);
 
 // I2C_MST_DELAY_CTRL register
-uint8_t getExternalShadowDelayEnabled();
-void setExternalShadowDelayEnabled(uint8_t enabled);
-uint8_t getSlaveDelayEnabled(uint8_t num);
-void setSlaveDelayEnabled(uint8_t num, uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetExternalShadowDelayEnabled();
+void pru_mpu6050_driver_SetExternalShadowDelayEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetSlaveDelayEnabled(uint8_t num);
+void pru_mpu6050_driver_SetSlaveDelayEnabled(uint8_t num, uint8_t enabled);
 
 // SIGNAL_PATH_RESET register
-void resetGyroscopePath();
-void resetAccelerometerPath();
-void resetTemperaturePath();
+void pru_mpu6050_driver_ResetGyroscopePath();
+void pru_mpu6050_driver_ResetAccelerometerPath();
+void pru_mpu6050_driver_ResetTemperaturePath();
 
 // MOT_DETECT_CTRL register
-uint8_t getAccelerometerPowerOnDelay();
-void setAccelerometerPowerOnDelay(uint8_t delay);
-uint8_t getFreefallDetectionCounterDecrement();
-void setFreefallDetectionCounterDecrement(uint8_t decrement);
-uint8_t getMotionDetectionCounterDecrement();
-void setMotionDetectionCounterDecrement(uint8_t decrement);
+uint8_t pru_mpu6050_driver_GetAccelerometerPowerOnDelay();
+void pru_mpu6050_driver_SetAccelerometerPowerOnDelay(uint8_t delay);
+uint8_t pru_mpu6050_driver_GetFreefallDetectionCounterDecrement();
+void pru_mpu6050_driver_SetFreefallDetectionCounterDecrement(uint8_t decrement);
+uint8_t pru_mpu6050_driver_GetMotionDetectionCounterDecrement();
+void pru_mpu6050_driver_SetMotionDetectionCounterDecrement(uint8_t decrement);
 
 // USER_CTRL register
-uint8_t getFIFOEnabled();
-void setFIFOEnabled(uint8_t enabled);
-uint8_t getI2CMasterModeEnabled();
-void setI2CMasterModeEnabled(uint8_t enabled);
-void switchSPIEnabled(uint8_t enabled);
-void resetFIFO();
-void resetI2CMaster();
-void resetSensors();
+uint8_t pru_mpu6050_driver_GetFIFOEnabled();
+void pru_mpu6050_driver_SetFIFOEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetI2CMasterModeEnabled();
+void pru_mpu6050_driver_SetI2CMasterModeEnabled(uint8_t enabled);
+void pru_mpu6050_driver_SwitchSPIEnabled(uint8_t enabled);
+void pru_mpu6050_driver_ResetFIFO();
+void pru_mpu6050_driver_ResetI2CMaster();
+void pru_mpu6050_driver_ResetSensors();
 
 // PWR_MGMT_1 register
-void reset();
-uint8_t getSleepEnabled();
-void setSleepEnabled(uint8_t enabled);
-uint8_t getWakeCycleEnabled();
-void setWakeCycleEnabled(uint8_t enabled);
-uint8_t getTempSensorEnabled();
-void setTempSensorEnabled(uint8_t enabled);
-uint8_t getClockSource();
-void setClockSource(uint8_t source);
+void pru_mpu6050_driver_Reset();
+uint8_t pru_mpu6050_driver_GetSleepEnabled();
+void pru_mpu6050_driver_SetSleepEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetWakeCycleEnabled();
+void pru_mpu6050_driver_SetWakeCycleEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetTempSensorEnabled();
+void pru_mpu6050_driver_SetTempSensorEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetClockSource();
+void pru_mpu6050_driver_SetClockSource(uint8_t source);
 
 // PWR_MGMT_2 register
-uint8_t getWakeFrequency();
-void setWakeFrequency(uint8_t frequency);
-uint8_t getStandbyXAccelEnabled();
-void setStandbyXAccelEnabled(uint8_t enabled);
-uint8_t getStandbyYAccelEnabled();
-void setStandbyYAccelEnabled(uint8_t enabled);
-uint8_t getStandbyZAccelEnabled();
-void setStandbyZAccelEnabled(uint8_t enabled);
-uint8_t getStandbyXGyroEnabled();
-void setStandbyXGyroEnabled(uint8_t enabled);
-uint8_t getStandbyYGyroEnabled();
-void setStandbyYGyroEnabled(uint8_t enabled);
-uint8_t getStandbyZGyroEnabled();
-void setStandbyZGyroEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetWakeFrequency();
+void pru_mpu6050_driver_SetWakeFrequency(uint8_t frequency);
+uint8_t pru_mpu6050_driver_GetStandbyXAccelEnabled();
+void pru_mpu6050_driver_SetStandbyXAccelEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetStandbyYAccelEnabled();
+void pru_mpu6050_driver_SetStandbyYAccelEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetStandbyZAccelEnabled();
+void pru_mpu6050_driver_SetStandbyZAccelEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetStandbyXGyroEnabled();
+void pru_mpu6050_driver_SetStandbyXGyroEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetStandbyYGyroEnabled();
+void pru_mpu6050_driver_SetStandbyYGyroEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetStandbyZGyroEnabled();
+void pru_mpu6050_driver_SetStandbyZGyroEnabled(uint8_t enabled);
 
 // FIFO_COUNT_* registers
-uint16_t getFIFOCount();
+uint16_t pru_mpu6050_driver_GetFIFOCount();
 
 // FIFO_R_W register
-uint8_t getFIFOByte();
-void setFIFOByte(uint8_t data);
-void getFIFOBytes(uint8_t *data, uint8_t length);
+uint8_t pru_mpu6050_driver_GetFIFOByte();
+void pru_mpu6050_driver_SetFIFOByte(uint8_t data);
+void pru_mpu6050_driver_GetFIFOBytes(uint8_t *data, uint8_t length);
 
 // WHO_AM_I register
-uint8_t getDeviceID();
-void setDeviceID(uint8_t id);
+uint8_t pru_mpu6050_driver_GetDeviceID();
+void pru_mpu6050_driver_SetDeviceID(uint8_t id);
 
 // ======== UNDOCUMENTED/DMP REGISTERS/METHODS ========
 
 // XG_OFFS_TC register
-uint8_t getOTPBankValid();
-void setOTPBankValid(uint8_t enabled);
-int8_t getXGyroOffset();
-void setXGyroOffset(int8_t offset);
+uint8_t pru_mpu6050_driver_GetOTPBankValid();
+void pru_mpu6050_driver_SetOTPBankValid(uint8_t enabled);
+int8_t pru_mpu6050_driver_GetXGyroOffset();
+void pru_mpu6050_driver_SetXGyroOffset(int8_t offset);
 
 // YG_OFFS_TC register
-int8_t getYGyroOffset();
-void setYGyroOffset(int8_t offset);
+int8_t pru_mpu6050_driver_GetYGyroOffset();
+void pru_mpu6050_driver_SetYGyroOffset(int8_t offset);
 
 // ZG_OFFS_TC register
-int8_t getZGyroOffset();
-void setZGyroOffset(int8_t offset);
+int8_t pru_mpu6050_driver_GetZGyroOffset();
+void pru_mpu6050_driver_SetZGyroOffset(int8_t offset);
 
 // X_FINE_GAIN register
-int8_t getXFineGain();
-void setXFineGain(int8_t gain);
+int8_t pru_mpu6050_driver_GetXFineGain();
+void pru_mpu6050_driver_SetXFineGain(int8_t gain);
 
 // Y_FINE_GAIN register
-int8_t getYFineGain();
-void setYFineGain(int8_t gain);
+int8_t pru_mpu6050_driver_GetYFineGain();
+void pru_mpu6050_driver_SetYFineGain(int8_t gain);
 
 // Z_FINE_GAIN register
-int8_t getZFineGain();
-void setZFineGain(int8_t gain);
+int8_t pru_mpu6050_driver_GetZFineGain();
+void pru_mpu6050_driver_SetZFineGain(int8_t gain);
 
 // XA_OFFS_* registers
-int16_t getXAccelOffset();
-void setXAccelOffset(int16_t offset);
+int16_t pru_mpu6050_driver_GetXAccelOffset();
+void pru_mpu6050_driver_SetXAccelOffset(int16_t offset);
 
 // YA_OFFS_* register
-int16_t getYAccelOffset();
-void setYAccelOffset(int16_t offset);
+int16_t pru_mpu6050_driver_GetYAccelOffset();
+void pru_mpu6050_driver_SetYAccelOffset(int16_t offset);
 
 // ZA_OFFS_* register
-int16_t getZAccelOffset();
-void setZAccelOffset(int16_t offset);
+int16_t pru_mpu6050_driver_GetZAccelOffset();
+void pru_mpu6050_driver_SetZAccelOffset(int16_t offset);
 
 // XG_OFFS_USR* registers
-int16_t getXGyroOffsetUser();
-void setXGyroOffsetUser(int16_t offset);
+int16_t pru_mpu6050_driver_GetXGyroOffsetUser();
+void pru_mpu6050_driver_SetXGyroOffsetUser(int16_t offset);
 
 // YG_OFFS_USR* register
-int16_t getYGyroOffsetUser();
-void setYGyroOffsetUser(int16_t offset);
+int16_t pru_mpu6050_driver_GetYGyroOffsetUser();
+void pru_mpu6050_driver_SetYGyroOffsetUser(int16_t offset);
 
 // ZG_OFFS_USR* register
-int16_t getZGyroOffsetUser();
-void setZGyroOffsetUser(int16_t offset);
+int16_t pru_mpu6050_driver_GetZGyroOffsetUser();
+void pru_mpu6050_driver_SetZGyroOffsetUser(int16_t offset);
 
 // INT_ENABLE register (DMP functions)
-uint8_t getIntPLLReadyEnabled();
-void setIntPLLReadyEnabled(uint8_t enabled);
-uint8_t getIntDMPEnabled();
-void setIntDMPEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetIntPLLReadyEnabled();
+void pru_mpu6050_driver_SetIntPLLReadyEnabled(uint8_t enabled);
+uint8_t pru_mpu6050_driver_GetIntDMPEnabled();
+void pru_mpu6050_driver_SetIntDMPEnabled(uint8_t enabled);
 
 // DMP_INT_STATUS
-uint8_t getDMPInt5Status();
-uint8_t getDMPInt4Status();
-uint8_t getDMPInt3Status();
-uint8_t getDMPInt2Status();
-uint8_t getDMPInt1Status();
-uint8_t getDMPInt0Status();
+uint8_t pru_mpu6050_driver_GetDMPInt5Status();
+uint8_t pru_mpu6050_driver_GetDMPInt4Status();
+uint8_t pru_mpu6050_driver_GetDMPInt3Status();
+uint8_t pru_mpu6050_driver_GetDMPInt2Status();
+uint8_t pru_mpu6050_driver_GetDMPInt1Status();
+uint8_t pru_mpu6050_driver_GetDMPInt0Status();
 
 // INT_STATUS register (DMP functions)
-uint8_t getIntPLLReadyStatus();
-uint8_t getIntDMPStatus();
+uint8_t pru_mpu6050_driver_GetIntPLLReadyStatus();
+uint8_t pru_mpu6050_driver_GetIntDMPStatus();
 
 // USER_CTRL register (DMP functions)
-uint8_t getDMPEnabled();
-void setDMPEnabled(uint8_t enabled);
-void resetDMP();
+uint8_t pru_mpu6050_driver_GetDMPEnabled();
+void pru_mpu6050_driver_SetDMPEnabled(uint8_t enabled);
+void pru_mpu6050_driver_ResetDMP();
+
+/********************************************************************************************
+ * D M P  M E T H O D S
+ ********************************************************************************************/
+
+// BANK_SEL register
+void pru_mpu6050_driver_SetMemoryBank(uint8_t bank, uint8_t prefetchEnabled,
+                                      uint8_t userBank);
+
+// MEM_START_ADDR register
+void pru_mpu6050_driver_SetMemoryStartAddress(uint8_t address);
+
+// MEM_R_W register
+uint8_t pru_mpu6050_driver_ReadMemoryByte();
+void pru_mpu6050_driver_WriteMemoryByte(uint8_t data);
+void pru_mpu6050_driver_ReadMemoryBlock(uint8_t *data, uint16_t dataSize,
+                                        uint8_t bank, uint8_t address);
+uint8_t pru_mpu6050_driver_WriteMemoryBlock(const uint8_t *data,
+                                            uint16_t dataSize, uint8_t bank,
+                                            uint8_t address, uint8_t verify,
+                                            uint8_t useProgMem);
+uint8_t pru_mpu6050_driver_WriteProgMemoryBlock(const uint8_t *data,
+                                                uint16_t dataSize, uint8_t bank,
+                                                uint8_t address,
+                                                uint8_t verify);
+
+uint8_t pru_mpu6050_driver_WriteDMPConfigurationSet(const uint8_t *data,
+                                                    uint16_t dataSize,
+                                                    uint8_t useProgMem);
+uint8_t pru_mpu6050_driver_WriteProgDMPConfigurationSet(const uint8_t *data,
+                                                        uint16_t dataSize);
+
+// DMP_CFG_1 register
+uint8_t pru_mpu6050_driver_GetDMPConfig1();
+void pru_mpu6050_driver_SetDMPConfig1(uint8_t config);
+
+// DMP_CFG_2 register
+uint8_t pru_mpu6050_driver_GetDMPConfig2();
+void pru_mpu6050_driver_SetDMPConfig2(uint8_t config);
+
+uint8_t pru_mpu6050_driver_DmpInitialize();
+uint8_t pru_mpu6050_driver_DmpPacketAvailable();
+
+uint8_t pru_mpu6050_driver_DmpSetFIFORate(uint8_t fifoRate);
+uint8_t pru_mpu6050_driver_DmpGetFIFORate();
+uint8_t pru_mpu6050_driver_DmpGetSampleStepSizeMS();
+uint8_t pru_mpu6050_driver_DmpGetSampleFrequency();
+int32_t pru_mpu6050_driver_DmpDecodeTemperature(int8_t tempReg);
+
+// Register callbacks after a packet of FIFO data is processed
+//uint8_t dmpRegisterFIFORateProcess(inv_obj_func func, int16_t priority);
+//uint8_t dmpUnregisterFIFORateProcess(inv_obj_func func);
+uint8_t pru_mpu6050_driver_DmpRunFIFORateProcesses();
+
+// Setup FIFO for various output
+uint8_t pru_mpu6050_driver_DmpSendQuaternion(uint_fast16_t accuracy);
+uint8_t pru_mpu6050_driver_DmpSendGyro(uint_fast16_t elements,
+                                       uint_fast16_t accuracy);
+uint8_t pru_mpu6050_driver_DmpSendAccel(uint_fast16_t elements,
+                                        uint_fast16_t accuracy);
+uint8_t pru_mpu6050_driver_DmpSendLinearAccel(uint_fast16_t elements,
+                                              uint_fast16_t accuracy);
+uint8_t pru_mpu6050_driver_DmpSendLinearAccelInWorld(uint_fast16_t elements,
+                                                     uint_fast16_t accuracy);
+uint8_t pru_mpu6050_driver_DmpSendControlData(uint_fast16_t elements,
+                                              uint_fast16_t accuracy);
+uint8_t pru_mpu6050_driver_DmpSendSensorData(uint_fast16_t elements,
+                                             uint_fast16_t accuracy);
+uint8_t pru_mpu6050_driver_DmpSendExternalSensorData(uint_fast16_t elements,
+                                                     uint_fast16_t accuracy);
+uint8_t pru_mpu6050_driver_DmpSendGravity(uint_fast16_t elements,
+                                          uint_fast16_t accuracy);
+uint8_t pru_mpu6050_driver_DmpSendPacketNumber(uint_fast16_t accuracy);
+uint8_t pru_mpu6050_driver_DmpSendQuantizedAccel(uint_fast16_t elements,
+                                                 uint_fast16_t accuracy);
+uint8_t pru_mpu6050_driver_DmpSendEIS(uint_fast16_t elements,
+                                      uint_fast16_t accuracy);
+
+// Get Fixed Point data from FIFO
+uint8_t pru_mpu6050_driver_DmpGetAccel32(int32_t *data, const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetAccel16(int16_t *data, const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetQuaternion32(int32_t *data,
+                                              const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetQuaternion16(int16_t *data,
+                                              const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGet6AxisQuaternion32(int32_t *data,
+                                                   const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGet6AxisQuaternion16(int16_t *data,
+                                                   const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetRelativeQuaternion32(int32_t *data,
+                                                      const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetRelativeQuaternion16(int16_t *data,
+                                                      const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetGyro32(int32_t *data, const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetGyro16(int16_t *data, const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetMag(int16_t *data, const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpSetLinearAccelFilterCoefficient(float coef);
+uint8_t pru_mpu6050_driver_DmpGetLinearAccel32(int32_t *data,
+                                               const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetLinearAccel16(int16_t *data,
+                                               const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetLinearAccelInWorld32(int32_t *data,
+                                                      const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetLinearAccelInWorld16(int16_t *data,
+                                                      const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetGyroAndAccelSensor32(int32_t *data,
+                                                      const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetGyroAndAccelSensor16(int16_t *data,
+                                                      const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetGyroSensor32(int32_t *data,
+                                              const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetGyroSensor16(int16_t *data,
+                                              const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetControlData(int32_t *data,
+                                             const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetTemperature(int32_t *data,
+                                             const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetGravity32(int32_t *data,
+                                           const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetGravity16(int16_t *data,
+                                           const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetUnquantizedAccel32(int32_t *data,
+                                                    const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetUnquantizedAccel16(int16_t *data,
+                                                    const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetQuantizedAccel32(int32_t *data,
+                                                  const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetQuantizedAccel16(int16_t *data,
+                                                  const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetExternalSensorData(int32_t *data,
+                                                    uint16_t size,
+                                                    const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetEIS(int32_t *data, const uint8_t* packet);
+
+// Get Floating Point data from FIFO
+uint8_t pru_mpu6050_driver_DmpGetAccelFloat(float *data, const uint8_t* packet);
+uint8_t pru_mpu6050_driver_DmpGetQuaternionFloat(float *data,
+                                                 const uint8_t* packet);
+
+uint8_t pru_mpu6050_driver_DmpProcessFIFOPacket(const unsigned char *dmpData);
+uint8_t pru_mpu6050_driver_DmpReadAndProcessFIFOPacket(uint8_t numPackets,
+                                                       uint8_t *processed);
+
+uint8_t pru_mpu6050_driver_DmpSetFIFOProcessedCallback(void (*func)(void));
+
+uint8_t pru_mpu6050_driver_DmpInitFIFOParam();
+uint8_t pru_mpu6050_driver_DmpCloseFIFO();
+uint8_t pru_mpu6050_driver_DmpSetGyroDataSource(uint8_t source);
+uint8_t pru_mpu6050_driver_DmpDecodeQuantizedAccel();
+uint32_t pru_mpu6050_driver_DmpGetGyroSumOfSquare();
+uint32_t pru_mpu6050_driver_DmpGetAccelSumOfSquare();
+void pru_mpu6050_driver_DmpOverrideQuaternion(long *q);
+uint16_t pru_mpu6050_driver_DmpGetFIFOPacketSize();
 
 #endif /* _MPU6050_H_ */
