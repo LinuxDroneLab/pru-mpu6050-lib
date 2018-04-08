@@ -717,33 +717,6 @@ void pru_mpu6050_driver_ResetDMP();
  * D M P  M E T H O D S
  ********************************************************************************************/
 
-// BANK_SEL register
-void pru_mpu6050_driver_SetMemoryBank(uint8_t bank, uint8_t prefetchEnabled,
-                                      uint8_t userBank);
-
-// MEM_START_ADDR register
-void pru_mpu6050_driver_SetMemoryStartAddress(uint8_t address);
-
-// MEM_R_W register
-uint8_t pru_mpu6050_driver_ReadMemoryByte();
-void pru_mpu6050_driver_WriteMemoryByte(uint8_t data);
-void pru_mpu6050_driver_ReadMemoryBlock(uint8_t *data, uint16_t dataSize,
-                                        uint8_t bank, uint8_t address);
-uint8_t pru_mpu6050_driver_WriteMemoryBlock(const uint8_t *data,
-                                            uint16_t dataSize, uint8_t bank,
-                                            uint8_t address, uint8_t verify,
-                                            uint8_t useProgMem);
-uint8_t pru_mpu6050_driver_WriteProgMemoryBlock(const uint8_t *data,
-                                                uint16_t dataSize, uint8_t bank,
-                                                uint8_t address,
-                                                uint8_t verify);
-
-uint8_t pru_mpu6050_driver_WriteDMPConfigurationSet(const uint8_t *data,
-                                                    uint16_t dataSize,
-                                                    uint8_t useProgMem);
-uint8_t pru_mpu6050_driver_WriteProgDMPConfigurationSet(const uint8_t *data,
-                                                        uint16_t dataSize);
-
 // DMP_CFG_1 register
 uint8_t pru_mpu6050_driver_GetDMPConfig1();
 void pru_mpu6050_driver_SetDMPConfig1(uint8_t config);
@@ -752,7 +725,6 @@ void pru_mpu6050_driver_SetDMPConfig1(uint8_t config);
 uint8_t pru_mpu6050_driver_GetDMPConfig2();
 void pru_mpu6050_driver_SetDMPConfig2(uint8_t config);
 
-uint8_t pru_mpu6050_driver_DmpInitialize();
 uint8_t pru_mpu6050_driver_DmpPacketAvailable();
 
 uint8_t pru_mpu6050_driver_DmpSetFIFORate(uint8_t fifoRate);
