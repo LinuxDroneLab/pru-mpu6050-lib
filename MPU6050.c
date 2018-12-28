@@ -18,6 +18,8 @@ void pru_mpu6050_driver_Initialize() {
     pru_mpu6050_driver_SetFullScaleGyroRange(MPU6050_GYRO_FS_250);
     pru_mpu6050_driver_SetFullScaleAccelRange(MPU6050_ACCEL_FS_2);
     pru_mpu6050_driver_SetSleepEnabled(0); // thanks to Jack Elston for pointing this one out!
+    pru_mpu6050_driver_SetDLPFMode(2);
+    pru_mpu6050_driver_SetRate(0); // 1KHz/(rate +1)
 }
 
 /** Verify the I2C connection.
