@@ -14,10 +14,10 @@ uint16_t pru_mpu6050_driver_DmpPacketSize = 42;
  * the default internal clock source.
  */
 void pru_mpu6050_driver_Initialize() {
-    pru_mpu6050_driver_SetClockSource(MPU6050_CLOCK_PLL_XGYRO);
-    pru_mpu6050_driver_SetFullScaleGyroRange(MPU6050_GYRO_FS_250);
-    pru_mpu6050_driver_SetFullScaleAccelRange(MPU6050_ACCEL_FS_2);
     pru_mpu6050_driver_SetSleepEnabled(0); // thanks to Jack Elston for pointing this one out!
+    pru_mpu6050_driver_SetClockSource(MPU6050_CLOCK_PLL_ZGYRO);
+    pru_mpu6050_driver_SetFullScaleGyroRange(MPU6050_GYRO_FS_500);
+    pru_mpu6050_driver_SetFullScaleAccelRange(MPU6050_ACCEL_FS_4);
     pru_mpu6050_driver_SetDLPFMode(2);
     pru_mpu6050_driver_SetRate(0); // 1KHz/(rate +1)
 }
